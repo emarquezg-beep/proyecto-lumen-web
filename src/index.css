@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Proyecto Lumen Design System - Paleta de Transformación */
+    --background: 45 33% 98%; /* Blanco Hueso #FAF9F6 */
+    --foreground: 210 78% 15%; /* Azul Profundo #0A2540 */
+
+    --card: 45 33% 98%;
+    --card-foreground: 210 78% 15%;
+
+    --popover: 45 33% 98%;
+    --popover-foreground: 210 78% 15%;
+
+    --primary: 210 78% 15%; /* Azul Profundo - Títulos y contraste */
+    --primary-foreground: 45 33% 98%;
+
+    --secondary: 82 39% 30%; /* Verde Olivo - Acento suave */
+    --secondary-foreground: 45 33% 98%;
+
+    --muted: 45 20% 92%;
+    --muted-foreground: 210 15% 45%;
+
+    --accent: 82 39% 30%; /* Verde Olivo */
+    --accent-foreground: 45 33% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 45 33% 98%;
+
+    --border: 210 20% 85%;
+    --input: 210 20% 85%;
+    --ring: 14 77% 61%;
+
+    --radius: 0.75rem;
+
+    /* CTA Color - Naranja Terracota */
+    --cta: 14 77% 61%; /* #E76F51 */
+    --cta-foreground: 45 33% 98%;
+    --cta-hover: 14 77% 55%;
+
+    /* Sección Oscura (Hermandad) */
+    --dark-section: 210 78% 15%;
+    --dark-section-foreground: 45 33% 98%;
+
+    /* Transiciones suaves */
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-primary font-bold tracking-tight;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
