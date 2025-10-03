@@ -21,6 +21,7 @@ const Hero = () => {
           muted
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
+          style={{ objectPosition: '60% center' }}
         >
           <source src="/ernesto-video-hero.mp4" type="video/mp4" />
         </video>
