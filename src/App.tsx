@@ -7,12 +7,14 @@ import Index from "./pages/Index";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
+import ComingSoon from "./components/ComingSoon";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
+      <ComingSoon />
       <Toaster />
       <Sonner />
       <BrowserRouter>
